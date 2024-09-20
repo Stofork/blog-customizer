@@ -9,11 +9,15 @@ const meta: Meta<typeof ArrowButton> = {
 export default meta;
 type Story = StoryObj<typeof ArrowButton>;
 
+const plug = () => {
+	console.log('plug');
+};
+
 export const ArrowButtonStory: Story = {
 	render: () => {
 		return (
 			<>
-				<ArrowButton />
+				<ArrowButton onOpen={plug} isOpen={false} />
 			</>
 		);
 	},
